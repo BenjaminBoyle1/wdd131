@@ -32,14 +32,14 @@ header {
   color: #fff;
   padding: 1em;
   display: flex;
-  flex-direction: column;   /* Stack branding and nav vertically */
-  align-items: center;      /* Center all header content */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 header .branding h1 {
   font-family: var(--secondary-font);
-  margin: 0 0 0.5em;        /* Space between the header title and nav */
+  margin: 0 0 0.5em;
 }
 
 /* Navigation Styles */
@@ -56,7 +56,6 @@ nav {
   margin-bottom: 0.5em;
 }
 
-/* Base nav links for narrow screens (vertical list) */
 #nav-links {
   list-style: none;
   padding: 0;
@@ -118,18 +117,16 @@ footer {
 
 /* --- Responsive Navigation --- */
 
-/* Medium screens (500px to 999px): Dropdown behavior */
-@media screen and (min-width: 700px) and (max-width: 999px) {
-  /* Show the Menu toggle button */
+/* Medium screens (0px to 999px): Dropdown behavior */
+@media screen and (min-width: 0px) and (max-width: 999px) {
   #menu-toggle {
     display: inline-block;
   }
-  /* Hide nav links by default */
   #nav-links {
     display: none;
     position: absolute;
     top: 100%;
-    right: 50%;                 /* Position center relative to nav */
+    right: 50%;
     transform: translateX(50%);
     background-color: var(--primary-color);
     padding: 1em;
@@ -137,11 +134,9 @@ footer {
     text-align: center;
     z-index: 1000;
   }
-  /* When open, display nav links */
   #nav-links.open {
     display: block;
   }
-  /* Vertical layout for dropdown nav links */
   #nav-links li {
     margin: 0.5em 0;
   }
@@ -149,11 +144,9 @@ footer {
 
 /* Large screens (1000px and wider): Horizontal navigation */
 @media screen and (min-width: 1000px) {
-  /* Hide the Menu toggle button */
   #menu-toggle {
     display: none;
   }
-  /* Display nav links horizontally */
   #nav-links {
     display: flex;
     position: static;
@@ -182,4 +175,44 @@ footer {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+/* Modal Viewer Styles */
+.viewer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1em;
+  z-index: 10;
+  width: 90vw;
+  max-width: 800px;
+  max-height: 90vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1em;
+  align-items: center;
+  justify-items: center;
+}
+
+.viewer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.viewer .close-viewer {
+  align-self: start;
+  justify-self: end;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hide Utility */
+.hide {
+  display: none;
 }
