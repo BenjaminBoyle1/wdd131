@@ -8,64 +8,89 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #ffffff;
-}
-
-.container {
+    background-color: #ffffff;  /* light theme background */
+    color: #000000;             /* default text color */
+  }
+  
+.content {
     background: white;
-    padding: 50px 30px; /* Added extra padding */
+    padding: 50px 30px;
     max-width: 600px;
     text-align: center;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-}
-
-/* Header Styling */
+  }
+  
+  /* Header Styling */
 header h1 {
-    font-size: 28px; /* Increased font size */
+    font-size: 28px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 10px;
-}
-
+  }
+  
 header h2 {
-    font-size: 16px; /* Reduced font size */
-    color: #006EB6;
+    font-size: 16px;
+    color: #006EB6; /* default blue */
     margin: 0;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-bottom: 1px solid #ccc; /* Added line under the text */
-    padding-bottom: 10px; /* Spacing between text and the line */
-}
-
-/* Main Content */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  
+  /* Main Content */
 main p {
     text-align: left;
     line-height: 1.6;
     margin: 15px 0;
-    padding: 0 10px; /* Ensure text is away from the edges */
-}
-
+    padding: 0 10px;
+  }
+  
 main p em {
     font-style: italic;
     display: block;
     margin-top: 10px;
-}
-
+  }
+  
 main ol {
     text-align: left;
     margin: 15px 0;
-    padding-left: 30px; /* Ensure list is indented properly */
-}
-
+    padding-left: 30px;
+  }
+  
 main ol li {
     margin-bottom: 15px;
     line-height: 1.6;
-}
-
-/* Footer */
+  }
+  
+  /* Footer */
 footer img {
     width: 150px;
     margin-top: 30px;
+  }
+  
+  /* --- Dark Theme Styles --- */
+  /* Apply these styles when the dark class is on the body */
+.dark {
+    background-color: #333;  /* dark background */         /* white text */
+  }
+.dark .content {
+    background-color: #444;   /* a slightly lighter dark grey for contrast */
+    border-color: #555;       /* adjust the border to blend with the dark theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: adjust the shadow if needed */
+  }
+.dark header h1 {
+        color: #ffffff; /* white */
+    }
+.dark ol li {
+    color: #ffffff; /* light blue */
+  }
+.dark main p {
+    color: #ffffff; /* white */
 }
+.dark header h2 {
+    color: #b8e3ff;
+  }
+  
