@@ -74,21 +74,21 @@ footer img {
   /* --- Dark Theme Styles --- */
   /* Apply these styles when the dark class is on the body */
 .dark {
-    background-color: #333;  /* dark background */         /* white text */
+    background-color: #333; 
   }
 .dark .content {
-    background-color: #444;   /* a slightly lighter dark grey for contrast */
-    border-color: #555;       /* adjust the border to blend with the dark theme */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional: adjust the shadow if needed */
+    background-color: #444;   
+    border-color: #555;       
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
   }
 .dark header h1 {
-        color: #ffffff; /* white */
+        color: #ffffff; 
     }
 .dark ol li {
-    color: #ffffff; /* light blue */
+    color: #ffffff;
   }
 .dark main p {
-    color: #ffffff; /* white */
+    color: #ffffff; 
 }
 .dark header h2 {
     color: #b8e3ff;
