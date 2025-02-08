@@ -125,9 +125,11 @@
   
   /* "Read more" link in red; paragraph in dark by default */
   .description a {
-    color: var(--red);
-    text-decoration: none;
+    color: #9D1B3C; /* A more contrast-friendly red */
+    font-weight: bold; /* extra emphasis helps */
+    text-decoration: underline; /* further distinguish from normal text */
   }
+  
   
   .description {
     margin-top: 0;
