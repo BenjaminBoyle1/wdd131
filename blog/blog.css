@@ -145,21 +145,30 @@
     margin-top: 0;
   }
   
-  /* Hide the skip link off-screen until focused */
-.skiptocontent a {
+/* 
+  We start the link off-screen. 
+  Once focused (tabbed to), we bring it into view at the top left.
+*/
+.skip-link a {
     position: absolute;
-    top: -40px;      /* Move it above the visible area */
     left: 0;
-    background: #EFC69B; /* Or any color that makes it stand out */
-    color: #AF1B3F;
+    top: -50px; /* Hide above the visible screen */
+    
+    background-color: #fff;
+    color: #000;          /* High contrast for visibility */
     padding: 0.5rem 1rem;
-    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 5px;
     font-weight: bold;
-    z-index: 9999;   /* Ensure it’s on top of other elements when focused */
+    text-decoration: none;
+    z-index: 9999;        /* Ensure it appears above other elements */
+    transition: top 0.3s ease;
   }
   
-  /* When the link is focused (keyboard nav), bring it into view */
-  .skiptocontent a:focus {
-    top: 0;
+  /* On focus (and hover, for completeness), bring it into view */
+  .skip-link a:focus,
+  .skip-link a:hover {
+    top: 0;               /* Move it into the visible area */
   }
+  
   
