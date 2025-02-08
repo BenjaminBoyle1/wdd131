@@ -1,0 +1,165 @@
+/*
+  Color variables:
+  Gold: #EFC69B
+  Red:  #AF1B3F
+  Dark: #473144
+*/
+:root {
+    --gold: #EFC69B;
+    --red: #AF1B3F;
+    --dark: #473144;
+  }
+  
+  /* Reset / Base */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Default text color: dark */
+    color: var(--dark);
+    background-color: #fff;
+  }
+  
+  /* Use Lora for headings (h1, h2) */
+  h1, h2 {
+    font-family: 'Lora', serif;
+  }
+  
+  /* --------------------
+     HEADER
+  ---------------------*/
+  header {
+    text-align: center;
+    padding-top: 30px;
+    border-bottom: 2px solid var(--gold);  /* Gold line under site title */
+    margin-bottom: 2rem;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  /* --------------------
+     NAVIGATION
+  ---------------------*/
+  nav {
+    border-top: 1px solid var(--gold);     /* Gold line */
+    border-bottom: 1px solid var(--gold);  /* Gold line */
+    margin-top: 1rem;
+  }
+  
+  /* Left-align nav links, spaced 50px apart, 
+     and use red color for links
+  */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Left aligned */
+    gap: 50px;                   /* 50px apart */
+    margin: 0;
+    padding: 0.5rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  /* --------------------
+     MAIN LAYOUT
+  ---------------------*/
+  .content-wrapper {
+    display: grid;
+    /* left: articles, right: filters */
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* --------------------
+     ARTICLES SECTION
+  ---------------------*/
+  article {
+    display: grid;
+    /* left col: date/age/genre/rating, right col: big image & text */
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    border-bottom: 1px solid var(--gold); /* Gold line under each article */
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Article details: date, age, genre, rating */
+  .article-details {
+    text-align: right;
+    border-right: 1px solid var(--gold); /* Vertical gold line */
+    padding-right: 1rem;
+    margin-right: 1rem;
+  }
+  .article-details p {
+    margin: 0.25rem 0;
+    font-weight: bold;
+  }
+  
+  /* Right column: book title, large image, description */
+  .article-info h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    color: var(--red); /* Book title in red */
+  }
+  
+  .article-info img {
+    width: 250px;  /* Large cover image */
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  /* "Read more" link in red; paragraph in dark by default */
+  .description a {
+    color: var(--red);
+    text-decoration: none;
+  }
+  
+  .description {
+    margin-top: 0;
+    line-height: 1.4;
+  }
+  
+  /* --------------------
+     FILTERS
+  ---------------------*/
+  .filters {
+    border: 1px solid var(--gold); /* Gold line around filters */
+    padding: 1rem;
+  }
+  .filters h2 {
+    margin-top: 0;
+  }
+  
+  /* Hide the skip link off-screen until focused */
+.skiptocontent a {
+    position: absolute;
+    top: -40px;      /* Move it above the visible area */
+    left: 0;
+    background: #EFC69B; /* Or any color that makes it stand out */
+    color: #AF1B3F;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 9999;   /* Ensure it’s on top of other elements when focused */
+  }
+  
+  /* When the link is focused (keyboard nav), bring it into view */
+  .skiptocontent a:focus {
+    top: 0;
+  }
+  
