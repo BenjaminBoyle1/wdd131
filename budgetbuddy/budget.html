@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="styles/site.css" />
+  <link rel="icon" href="images/logo.webp" type="image/webp" />
+  <script type="module" src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="images/logo.webp" alt="Budget Buddy Logo" class="logo" />
+      <h1>Budget Buddy</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="budget.html">Budget Tracker</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Add Entry</h2>
+      <form id="entry-form">
+        <input type="text" id="description" placeholder="Description" required />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <option value="food">Food</option>
+            <option value="rent">Rent</option>
+            <option value="transport">Transport</option>
+            <option value="entertainment">Entertainment</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+      <p class="note">Enter your daily expenses and income to keep your finances organized.</p>
+    </section>
+
+    <section class="entries">
+      <h2>Expense List</h2>
+      <p>Below is a list of all the expenses you've entered so far. Click the "X" to remove an item.</p>
+      <ul id="expense-list"></ul>
+    </section>
+
+    <section class="summary">
+      <h2>Budget Summary</h2>
+      <p>This section shows your current budget total across all categories. As you add and remove entries, the total will update automatically.</p>
+      <p>Total: $<span id="total">0</span></p>
+    </section>
+
+    <section class="guidance">
+      <h2>Budgeting Best Practices</h2>
+      <ul>
+        <li>Be consistent with categorizing your expenses.</li>
+        <li>Use the summary to compare spending habits over time.</li>
+        <li>Make sure your spending aligns with your goals.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Budget Buddy</p>
+  </footer>
+</body>
+</html>
