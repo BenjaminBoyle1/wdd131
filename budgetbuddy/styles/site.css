@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    background: #ffffff;
+    color: #353535;
+  }
+  
+  header, footer {
+    background: #3c6e71;
+    color: #ffffff;
+    padding: 1rem;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  nav {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  
+  nav a {
+    color: #ffffff;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  nav a:hover {
+    color: white;
+    background-color: #353535;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  .hero, .features, .form-section, .entries, .summary, .info, .tips, .guidance {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .features {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .feature {
+    background: #d9d9d9;
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+  }
+  
+  .cta {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #284b63;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  form input, form select, form button {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: calc(100% - 1rem);
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  form button {
+    background: #3c6e71;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #expense-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #expense-list li {
+    background: #f0f0f0;
+    margin: 0.5rem auto;
+    max-width: 300px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #expense-list button {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .note {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 1rem;
+  }
+  
+  .tips ul,
+  .guidance ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  footer p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .header-content {
+      flex-direction: column;
+    }
+  }
